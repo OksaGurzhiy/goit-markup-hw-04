@@ -162,6 +162,8 @@ a {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/people-office.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -237,11 +239,14 @@ a {
   margin-right: 24px;
 }
 .features-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 8px;
-  padding: 0px;
+
   height: 112px;
   width: 100%;
-  color: var(--second-bgc);
+  background-color: var(--second-bgc);
   border: none;
   border-radius: 4px;
 }
@@ -385,7 +390,6 @@ a {
   border: none;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 }
 .social-btn:hover,
 .social-btn:focus {
@@ -402,11 +406,9 @@ a {
   padding: 130px 0 120px 0px;
   margin: 0 auto;
 }
-.customers-container {
-  display: flex;
-  margin-top: 72px;
-}
+
 .customers-list {
+  margin-top: 72px;
   display: flex;
   gap: 24px;
 }
@@ -422,13 +424,14 @@ a {
 .customers-btn {
   justify-content: center;
   align-items: center;
-  width: 168px;
-  height: 88px;
-  border: 1px solid var(--light-slate);
+  width: 100%;
+  height: 100%;
+  border: 1px solid currentColor;
   border-radius: 4px;
+  color: var(--light-slate);
 }
 .customers-icons {
-  fill: var(--light-slate);
+  fill: currentColor;
   width: 104px;
   height: 56px;
 }
@@ -436,7 +439,6 @@ a {
 .customers-btn:hover,
 .customers-btn:focus {
   color: var(--accent);
-  border: 1px solid #404bbf;
 }
 
 .customers-icons:hover,
@@ -483,9 +485,10 @@ a {
 }
 .footer-list {
   display: flex;
-  gap: 120px;
 }
-
+.footer-item:not(last-child) {
+  margin-right: 120px;
+}
 .footer-media {
   margin-bottom: 16px;
   font-weight: 500;
@@ -602,14 +605,20 @@ a {
     (100% - (var(--distance-card-gallery) * (var(--number-cards-gallery) - 1))) /
       var(--number-cards-gallery)
   );
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  border-radius: 0px 0px 4px 4px;
+  border: 1px solid #e7e9fc;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
-
 .portfolio-card > a {
+  display: block;
   color: inherit;
 }
+.portfolio-card > a:hover,
+.portfolio-card > a:focus {
+  border: 0.5px solid #f4f4fd;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .border-card {
   border: 1px solid #e7e9fc;
   border-top: none;
