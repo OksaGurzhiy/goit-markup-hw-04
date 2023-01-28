@@ -605,7 +605,7 @@ a {
     (100% - (var(--distance-card-gallery) * (var(--number-cards-gallery) - 1))) /
       var(--number-cards-gallery)
   );
-  border: 1px solid #e7e9fc;
+
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .portfolio-card > a {
@@ -614,7 +614,7 @@ a {
 }
 .portfolio-card > a:hover,
 .portfolio-card > a:focus {
-  border: 0.5px solid #f4f4fd;
+  
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
